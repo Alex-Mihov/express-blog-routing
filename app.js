@@ -15,6 +15,8 @@ app.get("/", (req, res) => {
 })
 
 
+// utilizzo la rotta dei desserts definendo la parte iniziale
+app.use("/posts", dessertsRouter);
 
 
 app.listen(port, () => {

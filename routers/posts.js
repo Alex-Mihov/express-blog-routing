@@ -2,15 +2,20 @@
 const express = require('express')
 const router = express.Router();
 
+// importiamo l'array di data
+const data = require("../data/posts")
+
 // rotte CRUD
 // index
 router.get("/", function(req, res){
-    res.send("Lista dei desserts")
+    // res.send("Lista dei desserts")
+    res.json(data)
 });
 
 // show
 router.get("/:id", function(req, res){
-    res.send("Dettagli dei desserts" + req.params.id)
+    // res.send("Dettagli dei desserts" + req.params.id)
+    res.json(data[req.params.id])
 });
 
 // create 
